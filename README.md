@@ -13,9 +13,11 @@ This is a simple Node.js project to demonstrate CI/CD using a separate Devops re
 1. Install dependencies:
 ```bash
 npm install
+```
 2. start the app
+```bash
 node index.js
-
+```
 ## CI/CD ##
 CI/CD is handled in a separate repository called Devops.
 
