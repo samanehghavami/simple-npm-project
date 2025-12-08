@@ -1,0 +1,13 @@
+name: Trigger Devops CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  trigger_ci:
+    uses: samanehghavami/Devops/.github/workflows/ci.yml@ci
+    with:
+      repo: samanehghavami/simple-npm-project
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
