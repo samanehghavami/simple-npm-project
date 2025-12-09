@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - '*'
-    
 
 jobs:
   trigger_ci:
@@ -12,4 +11,4 @@ jobs:
     with:
       repo: samanehghavami/simple-npm-project
     secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TOKEN: ${{ secrets.GITHUB_TOKEN }} 
