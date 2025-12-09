@@ -2,7 +2,9 @@ name: Trigger Devops CI
 
 on:
   push:
-    branches: [ main ]
+    tags:
+      - '*'
+    
 
 jobs:
   trigger_ci:
