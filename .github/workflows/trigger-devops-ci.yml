@@ -3,7 +3,7 @@ name: Trigger Devops CI
 on:
   push:
     tags:
-      - '*'
+      - 'v.*.*'
 
 jobs:
   trigger_ci:
