@@ -1,14 +1,17 @@
-name: Trigger Devops CI
+name: Trigger CI
 
 on:
   push:
     tags:
-      - 'v.*.*'
+      - "v*.*.*" 
 
 jobs:
-  trigger_ci:
-    uses: samanehghavami/Devops/.github/workflows/ci.yml@ci
+  call-ci:
+    uses: samanehghavami/Devops/.github/workflows/ci.yml@main
     with:
-      repo: samanehghavami/simple-npm-project
+      registry: "192.168.1.200"
+      image: "simple-npm-app"
+      tag: ${{ github.ref_name }} 
     secrets:
-      TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
+      REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
